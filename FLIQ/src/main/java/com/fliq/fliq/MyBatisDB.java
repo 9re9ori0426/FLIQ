@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 
+// MyBatis DB 연결 설정
 public class MyBatisDB {
     public static SqlSession connect() throws IOException {
         String resource = "config.xml";
