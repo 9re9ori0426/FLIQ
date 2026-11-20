@@ -40,3 +40,4 @@ build/
 
 ### intelliJ ###
 .idea
+src/main/resources/config.xml
