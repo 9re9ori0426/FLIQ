@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="oracle.jdbc.OracleDriver"/>
+                <property name="url" value="jdbc:oracle:thin:@ueve4m9uxlak54td_medium?TNS_ADMIN=C:/Users/IM/Documents/project/Wallet_UEVE4M9UXLAK54TD"/>
+                <property name="username" value="FLIQ"/>
+                <property name="password" value="Soldesk502!!"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="Mapper.xml"/>
+    </mappers>
+</configuration>
