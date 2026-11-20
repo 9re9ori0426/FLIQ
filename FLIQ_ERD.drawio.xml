@@ -11,7 +11,7 @@
         <mxCell id="desc" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#64748B;fontStyle=0;spacing=0;" value="Oracle Database 19c  ·  v4.5  ·  1차 localhost  ·  2026-11-19" vertex="1">
           <mxGeometry height="40" width="1500" x="80" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="stats" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontColor=#334155;fontStyle=1;spacing=0;" value="11 TABLES     69 COLUMNS     11 PRIMARY KEYS     17 FOREIGN KEYS" vertex="1">
+        <mxCell id="stats" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontColor=#334155;fontStyle=1;spacing=0;" value="11 TABLES     64 COLUMNS     11 PRIMARY KEYS     17 FOREIGN KEYS" vertex="1">
           <mxGeometry height="42" width="1400" x="1640" y="54" as="geometry" />
         </mxCell>
         <mxCell id="legend" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=14;fontColor=#64748B;fontStyle=0;spacing=0;" value="연결선:  실선 = 단일 FK   |   점선 = 복합 FK   |   부모 1 ↔ 자식 0..N / 0..1" vertex="1">
@@ -32,13 +32,13 @@
         <mxCell id="section-24401512" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontColor=#475569;fontStyle=1;spacing=0;" value="채팅" vertex="1">
           <mxGeometry height="36" width="1000" x="2440" y="1512" as="geometry" />
         </mxCell>
-        <mxCell id="edge-FK_LISTING_OWNER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.19;entryDx=0;entryDy=0;exitX=1;exitY=0.48;exitDx=0;exitDy=0;strokeColor=#0F766E;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-LISTING" tooltip="FK_LISTING_OWNER | LISTING.owner_id → APP_USER.user_id | 자식→부모 1 / 부모→자식 0..N | 상품 원등록 판매자" value="">
+        <mxCell id="edge-FK_LISTING_OWNER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.19;entryDx=0;entryDy=0;exitX=1;exitY=0.48;exitDx=0;exitDy=0;strokeColor=#0F766E;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-LISTING" tooltip="FK_LISTING_OWNER | PRODUCT.p_users_id → USERS.u_id | 자식→부모 1 / 부모→자식 0..N | 상품 원등록 판매자" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-FK_LISTING_CATEGORY" edge="1" parent="1" source="tbl-CATEGORY" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.72;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#0F766E;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-LISTING" tooltip="FK_LISTING_CATEGORY | LISTING.category_id → CATEGORY.category_id | 자식→부모 1 / 부모→자식 0..N | 필수 상품 분류" value="">
+        <mxCell id="edge-FK_LISTING_CATEGORY" edge="1" parent="1" source="tbl-CATEGORY" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.72;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#0F766E;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-LISTING" tooltip="FK_LISTING_CATEGORY | PRODUCT.p_category_id → CATEGORY.c_id | 자식→부모 1 / 부모→자식 0..N | 필수 상품 분류" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-FK_IMG_LISTING" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.55;entryDx=0;entryDy=0;exitX=1;exitY=0.13;exitDx=0;exitDy=0;strokeColor=#0F766E;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-LISTING_IMAGE" tooltip="FK_IMG_LISTING | LISTING_IMAGE.listing_id → LISTING.listing_id | 자식→부모 1 / 부모→자식 0..1 | 상품 한 건의 대표 이미지" value="">
+        <mxCell id="edge-FK_IMG_LISTING" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.55;entryDx=0;entryDy=0;exitX=1;exitY=0.13;exitDx=0;exitDy=0;strokeColor=#0F766E;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-LISTING_IMAGE" tooltip="FK_IMG_LISTING | PRODUCT_IMAGE.pi_product_id → PRODUCT.p_id | 자식→부모 1 / 부모→자식 0..1 | 상품 한 건의 대표 이미지" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1550" y="500" />
@@ -46,17 +46,17 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_AUC_LISTING" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.3;entryDx=0;entryDy=0;exitX=1;exitY=0.52;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-AUCTION" tooltip="FK_AUC_LISTING | AUCTION.listing_id → LISTING.listing_id | 자식→부모 1 / 부모→자식 0..1 | 경매가 개설된 상품" value="">
+        <mxCell id="edge-FK_AUC_LISTING" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.3;entryDx=0;entryDy=0;exitX=1;exitY=0.52;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-AUCTION" tooltip="FK_AUC_LISTING | AUCTION.a_product_id → PRODUCT.p_id | 자식→부모 1 / 부모→자식 0..1 | 경매가 개설된 상품" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-FK_AUC_WIN_BID" edge="1" parent="1" source="tbl-BID" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=1;entryY=0.24;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERzeroToOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-AUCTION" tooltip="FK_AUC_WIN_BID | AUCTION.auction_id, winning_bid_id → BID.auction_id, bid_id | 자식→부모 0..1 / 부모→자식 0..1 | 낙찰 입찰은 같은 경매의 유효 입찰만 참조. BID 생성 후 FK 추가." value="">
+        <mxCell id="edge-FK_AUC_WIN_BID" edge="1" parent="1" source="tbl-BID" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=1;entryY=0.24;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERzeroToOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-AUCTION" tooltip="FK_AUC_WIN_BID | AUCTION.a_id, a_winning_bid_id → BID.b_auction_id, b_id | 자식→부모 0..1 / 부모→자식 0..1 | 낙찰 입찰은 같은 경매의 유효 입찰만 참조. BID 생성 후 FK 추가." value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="2355" y="635" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_BID_AUCTION" edge="1" parent="1" source="tbl-AUCTION" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.81;entryDx=0;entryDy=0;exitX=1;exitY=0.78;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-BID" tooltip="FK_BID_AUCTION | BID.auction_id → AUCTION.auction_id | 자식→부모 1 / 부모→자식 0..N | 입찰 소속 경매" value="">
+        <mxCell id="edge-FK_BID_AUCTION" edge="1" parent="1" source="tbl-AUCTION" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.81;entryDx=0;entryDy=0;exitX=1;exitY=0.78;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-BID" tooltip="FK_BID_AUCTION | BID.b_auction_id → AUCTION.a_id | 자식→부모 1 / 부모→자식 0..N | 입찰 소속 경매" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="2350" y="820" />
@@ -64,7 +64,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_BID_BIDDER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0.55;entryY=0;entryDx=0;entryDy=0;exitX=0.4;exitY=0;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-BID" tooltip="FK_BID_BIDDER | BID.bidder_id → APP_USER.user_id | 자식→부모 1 / 부모→자식 0..N | 유효 입찰의 작성 계정" value="">
+        <mxCell id="edge-FK_BID_BIDDER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0.55;entryY=0;entryDx=0;entryDy=0;exitX=0.4;exitY=0;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-BID" tooltip="FK_BID_BIDDER | BID.b_bidder_id → USERS.u_id | 자식→부모 1 / 부모→자식 0..N | 유효 입찰의 작성 계정" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="328" y="245" />
@@ -72,7 +72,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_ORD_LISTING" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.38;entryDx=0;entryDy=0;exitX=1;exitY=0.89;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-ORDERS" tooltip="FK_ORD_LISTING | ORDERS.listing_id → LISTING.listing_id | 자식→부모 1 / 부모→자식 0..1 | 구매 대상 상품" value="">
+        <mxCell id="edge-FK_ORD_LISTING" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.38;entryDx=0;entryDy=0;exitX=1;exitY=0.89;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-ORDERS" tooltip="FK_ORD_LISTING | ORDERS.o_product_id → PRODUCT.p_id | 자식→부모 1 / 부모→자식 0..1 | 구매 대상 상품" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1530" y="965" />
@@ -81,7 +81,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_ORD_BUYER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=1;entryY=0.51;entryDx=0;entryDy=0;exitX=0.68;exitY=0;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-ORDERS" tooltip="FK_ORD_BUYER | ORDERS.buyer_id → APP_USER.user_id | 자식→부모 1 / 부모→자식 0..N | 구매한 회원" value="">
+        <mxCell id="edge-FK_ORD_BUYER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=1;entryY=0.51;entryDx=0;entryDy=0;exitX=0.68;exitY=0;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-ORDERS" tooltip="FK_ORD_BUYER | ORDERS.o_buyer_id → USERS.u_id | 자식→부모 1 / 부모→자식 0..N | 구매한 회원" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="501" y="215" />
@@ -90,7 +90,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_ORD_AUC_LISTING" edge="1" parent="1" source="tbl-AUCTION" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.16;entryDx=0;entryDy=0;exitX=0.7;exitY=1;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERzeroToOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-ORDERS" tooltip="FK_ORD_AUC_LISTING | ORDERS.listing_id, auction_id → AUCTION.listing_id, auction_id | 자식→부모 0..1 / 부모→자식 0..1 | 경매 ID가 있으면 주문과 경매의 상품 일치 강제." value="">
+        <mxCell id="edge-FK_ORD_AUC_LISTING" edge="1" parent="1" source="tbl-AUCTION" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.16;entryDx=0;entryDy=0;exitX=0.7;exitY=1;exitDx=0;exitDy=0;strokeColor=#1D4ED8;strokeWidth=2.4;startArrow=ERzeroToOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-ORDERS" tooltip="FK_ORD_AUC_LISTING | ORDERS.o_product_id, o_auction_id → AUCTION.a_product_id, a_id | 자식→부모 0..1 / 부모→자식 0..1 | 경매 ID가 있으면 주문과 경매의 상품 일치 강제." value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="2100" y="970" />
@@ -99,7 +99,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_OFFER_TARGET" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0.28;entryY=0;entryDx=0;entryDy=0;exitX=0.27;exitY=1;exitDx=0;exitDy=0;strokeColor=#6D28D9;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-TRADE_OFFER" tooltip="FK_OFFER_TARGET | TRADE_OFFER.target_listing_id, receiver_id → LISTING.listing_id, owner_id | 자식→부모 1 / 부모→자식 0..N | 대상 상품과 수신자 소유 관계 구속. 회원 참조는 LISTING을 통함." value="">
+        <mxCell id="edge-FK_OFFER_TARGET" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0.28;entryY=0;entryDx=0;entryDy=0;exitX=0.27;exitY=1;exitDx=0;exitDy=0;strokeColor=#6D28D9;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-TRADE_OFFER" tooltip="FK_OFFER_TARGET | TRADE_OFFER.to_target_product_id, to_receiver_id → PRODUCT.p_id, p_users_id | 자식→부모 1 / 부모→자식 0..N | 대상 상품과 수신자 소유 관계 구속. 회원 참조는 LISTING을 통함." value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1030" y="1090" />
@@ -107,7 +107,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_OFFER_OFFERED" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0.74;entryY=0;entryDx=0;entryDy=0;exitX=0.76;exitY=1;exitDx=0;exitDy=0;strokeColor=#6D28D9;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-TRADE_OFFER" tooltip="FK_OFFER_OFFERED | TRADE_OFFER.offered_listing_id, sender_id → LISTING.listing_id, owner_id | 자식→부모 1 / 부모→자식 0..N | 제공 상품과 발신자 소유 관계 구속. 회원 참조는 LISTING을 통함." value="">
+        <mxCell id="edge-FK_OFFER_OFFERED" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0.74;entryY=0;entryDx=0;entryDy=0;exitX=0.76;exitY=1;exitDx=0;exitDy=0;strokeColor=#6D28D9;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-TRADE_OFFER" tooltip="FK_OFFER_OFFERED | TRADE_OFFER.to_offered_product_id, to_sender_id → PRODUCT.p_id, p_users_id | 자식→부모 1 / 부모→자식 0..N | 제공 상품과 발신자 소유 관계 구속. 회원 참조는 LISTING을 통함." value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1330" y="1090" />
@@ -115,10 +115,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_DEAL_OFFER" edge="1" parent="1" source="tbl-TRADE_OFFER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.48;entryDx=0;entryDy=0;exitX=1;exitY=0.43;exitDx=0;exitDy=0;strokeColor=#6D28D9;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-TRADE_DEAL" tooltip="FK_DEAL_OFFER | TRADE_DEAL.offer_id → TRADE_OFFER.offer_id | 자식→부모 1 / 부모→자식 0..1 | 교환 거래가 유래한 제안" value="">
+        <mxCell id="edge-FK_DEAL_OFFER" edge="1" parent="1" source="tbl-TRADE_OFFER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.48;entryDx=0;entryDy=0;exitX=1;exitY=0.43;exitDx=0;exitDy=0;strokeColor=#6D28D9;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-TRADE_DEAL" tooltip="FK_DEAL_OFFER | TRADE_DEAL.td_trade_offer_id → TRADE_OFFER.to_id | 자식→부모 1 / 부모→자식 0..1 | 교환 거래가 유래한 제안" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-FK_ROOM_LIST_SELLER" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.48;entryDx=0;entryDy=0;exitX=1;exitY=0.96;exitDx=0;exitDy=0;strokeColor=#B45309;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-CHAT_ROOM" tooltip="FK_ROOM_LIST_SELLER | CHAT_ROOM.listing_id, seller_id → LISTING.listing_id, owner_id | 자식→부모 1 / 부모→자식 0..N | 방의 상품과 판매자 소유 관계 구속. 판매자 회원 참조는 LISTING을 통함." value="">
+        <mxCell id="edge-FK_ROOM_LIST_SELLER" edge="1" parent="1" source="tbl-LISTING" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.48;entryDx=0;entryDy=0;exitX=1;exitY=0.96;exitDx=0;exitDy=0;strokeColor=#B45309;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=1;dashPattern=7 5;" target="tbl-CHAT_ROOM" tooltip="FK_ROOM_LIST_SELLER | CHAT_ROOM.cr_product_id, cr_seller_id → PRODUCT.p_id, p_users_id | 자식→부모 1 / 부모→자식 0..N | 방의 상품과 판매자 소유 관계 구속. 판매자 회원 참조는 LISTING을 통함." value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1515" y="1335" />
@@ -127,7 +127,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_ROOM_BUYER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=1;entryY=0.55;entryDx=0;entryDy=0;exitX=0.84;exitY=0;exitDx=0;exitDy=0;strokeColor=#B45309;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-CHAT_ROOM" tooltip="FK_ROOM_BUYER | CHAT_ROOM.buyer_id → APP_USER.user_id | 자식→부모 1 / 부모→자식 0..N | 방을 개설한 관심 회원" value="">
+        <mxCell id="edge-FK_ROOM_BUYER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=1;entryY=0.55;entryDx=0;entryDy=0;exitX=0.84;exitY=0;exitDx=0;exitDy=0;strokeColor=#B45309;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-CHAT_ROOM" tooltip="FK_ROOM_BUYER | CHAT_ROOM.cr_buyer_id → USERS.u_id | 자식→부모 1 / 부모→자식 0..N | 방을 개설한 관심 회원" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="601" y="190" />
@@ -136,10 +136,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-FK_MSG_ROOM" edge="1" parent="1" source="tbl-CHAT_ROOM" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.55;entryDx=0;entryDy=0;exitX=1;exitY=0.55;exitDx=0;exitDy=0;strokeColor=#B45309;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-CHAT_MESSAGE" tooltip="FK_MSG_ROOM | CHAT_MESSAGE.room_id → CHAT_ROOM.room_id | 자식→부모 1 / 부모→자식 0..N | 메시지 소속 방" value="">
+        <mxCell id="edge-FK_MSG_ROOM" edge="1" parent="1" source="tbl-CHAT_ROOM" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=0;entryY=0.55;entryDx=0;entryDy=0;exitX=1;exitY=0.55;exitDx=0;exitDy=0;strokeColor=#B45309;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-CHAT_MESSAGE" tooltip="FK_MSG_ROOM | CHAT_MESSAGE.cm_chat_room_id → CHAT_ROOM.cr_id | 자식→부모 1 / 부모→자식 0..N | 메시지 소속 방" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-FK_MSG_SENDER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=1;entryY=0.56;entryDx=0;entryDy=0;exitX=0.95;exitY=0;exitDx=0;exitDy=0;strokeColor=#B45309;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-CHAT_MESSAGE" tooltip="FK_MSG_SENDER | CHAT_MESSAGE.sender_id → APP_USER.user_id | 자식→부모 1 / 부모→자식 0..N | 발신 계정. 방 참여 검사는 서버에서 수행." value="">
+        <mxCell id="edge-FK_MSG_SENDER" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=24;rounded=0;html=1;entryX=1;entryY=0.56;entryDx=0;entryDy=0;exitX=0.95;exitY=0;exitDx=0;exitDy=0;strokeColor=#B45309;strokeWidth=2.4;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;dashed=0;dashPattern=7 5;" target="tbl-CHAT_MESSAGE" tooltip="FK_MSG_SENDER | CHAT_MESSAGE.cm_sender_id → USERS.u_id | 자식→부모 1 / 부모→자식 0..N | 발신 계정. 방 참여 검사는 서버에서 수행." value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="669" y="165" />
@@ -154,13 +154,13 @@
         <mxCell id="hdr-APP_USER" parent="tbl-APP_USER" style="rounded=1;arcSize=4;fillColor=#0F766E;strokeColor=#0F766E;html=1;whiteSpace=wrap;" value="" vertex="1">
           <mxGeometry height="68.46473029045644" width="620" as="geometry" />
         </mxCell>
-        <mxCell id="hdr-name-APP_USER" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=22;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="USER" vertex="1">
+        <mxCell id="hdr-name-APP_USER" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=22;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="USERS" vertex="1">
           <mxGeometry height="33.19502074688797" width="405" x="19" y="7.261410788381744" as="geometry" />
         </mxCell>
         <mxCell id="hdr-desc-APP_USER" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#F8FAFC;fontStyle=0;spacing=0;" value="회원" vertex="1">
           <mxGeometry height="22.821576763485478" width="438" x="20" y="41.49377593360996" as="geometry" />
         </mxCell>
-        <mxCell id="hdr-count-APP_USER" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="5 columns" vertex="1">
+        <mxCell id="hdr-count-APP_USER" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="4 columns" vertex="1">
           <mxGeometry height="31.120331950207472" width="147" x="450" y="17.634854771784234" as="geometry" />
         </mxCell>
         <mxCell id="rowbg-APP_USER-0" parent="tbl-APP_USER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" value="" vertex="1">
@@ -169,7 +169,7 @@
         <mxCell id="key-APP_USER-0" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#1D4ED8;fontStyle=1;spacing=0;" value="PK" vertex="1">
           <mxGeometry height="23.858921161825727" width="68" x="8" y="73.65145228215768" as="geometry" />
         </mxCell>
-        <mxCell id="col-APP_USER-user_id" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="APP_USER.user_id | NUMBER(18,0) | NULL 불가 | KEY PK | DEFAULT GENERATED ALWAYS AS IDENTITY | 회원 ID | " value="user_id" vertex="1">
+        <mxCell id="col-APP_USER-user_id" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="USERS.u_id | NUMBER(18,0) | NULL 불가 | KEY PK | ID 생성: INSERT 시 users_seq.NEXTVAL 사용 | 회원 ID | " value="u_id" vertex="1">
           <mxGeometry height="26.970954356846477" width="205" x="80" y="72.61410788381744" as="geometry" />
         </mxCell>
         <mxCell id="type-APP_USER-0" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -184,7 +184,7 @@
         <mxCell id="key-APP_USER-1" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="UQ" vertex="1">
           <mxGeometry height="23.858921161825727" width="68" x="8" y="107.8838174273859" as="geometry" />
         </mxCell>
-        <mxCell id="col-APP_USER-email" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="APP_USER.email | VARCHAR2(254 CHAR) | NULL 불가 | KEY UQ | DEFAULT 없음 | 가입/로그인 공용 정규화 이메일. 영문 ASCII 이메일을 앞뒤 공백 제거 후 소문자로 통일. | " value="email" vertex="1">
+        <mxCell id="col-APP_USER-email" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="USERS.u_email | VARCHAR2(30 CHAR) | NULL 불가 | KEY UQ | DEFAULT 없음 | 가입/로그인 공용 정규화 이메일. 영문 ASCII 이메일을 앞뒤 공백 제거 후 소문자로 통일. | " value="u_email" vertex="1">
           <mxGeometry height="26.970954356846477" width="205" x="80" y="106.84647302904565" as="geometry" />
         </mxCell>
         <mxCell id="type-APP_USER-1" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(30 CHAR)" vertex="1">
@@ -199,7 +199,7 @@
         <mxCell id="key-APP_USER-2" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23.858921161825727" width="68" x="8" y="142.11618257261412" as="geometry" />
         </mxCell>
-        <mxCell id="col-APP_USER-password_hash" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="APP_USER.password_hash | VARCHAR2(255 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 라이브러리가 생성한 Argon2id 인코딩 해시(솔트·파라미터 포함). | " value="password" vertex="1">
+        <mxCell id="col-APP_USER-password_hash" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="USERS.u_password | VARCHAR2(30 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 로컬 테스트용 계정 비밀번호. 입력 범위는 8~30 코드 포인트. | " value="u_password" vertex="1">
           <mxGeometry height="26.970954356846477" width="205" x="80" y="141.07883817427387" as="geometry" />
         </mxCell>
         <mxCell id="type-APP_USER-2" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(30 CHAR)" vertex="1">
@@ -214,7 +214,7 @@
         <mxCell id="key-APP_USER-3" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23.858921161825727" width="68" x="8" y="176.34854771784234" as="geometry" />
         </mxCell>
-        <mxCell id="col-APP_USER-nickname" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="APP_USER.nickname | VARCHAR2(30 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 화면 표시용 닉네임. 앞뒤 공백 제거 후 1~30 코드 포인트. 중복 허용. | " value="nickname" vertex="1">
+        <mxCell id="col-APP_USER-nickname" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="USERS.u_nickname | VARCHAR2(30 CHAR) | NULL 불가 | KEY UQ | DEFAULT 없음 | 화면 표시용 닉네임. 앞뒤 공백 제거 후 1~30 코드 포인트. 중복 허용. | " value="u_nickname" vertex="1">
           <mxGeometry height="26.970954356846477" width="205" x="80" y="175.31120331950208" as="geometry" />
         </mxCell>
         <mxCell id="type-APP_USER-3" parent="tbl-APP_USER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(30 CHAR)" vertex="1">
@@ -250,7 +250,7 @@
         <mxCell id="key-CATEGORY-0" parent="tbl-CATEGORY" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#1D4ED8;fontStyle=1;spacing=0;" value="PK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-CATEGORY-category_id" parent="tbl-CATEGORY" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="CATEGORY.category_id | NUMBER(18,0) | NULL 불가 | KEY PK | DEFAULT GENERATED ALWAYS AS IDENTITY | 카테고리 ID | " value="category_id" vertex="1">
+        <mxCell id="col-CATEGORY-category_id" parent="tbl-CATEGORY" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="CATEGORY.c_id | NUMBER(18,0) | NULL 불가 | KEY PK | ID 생성: INSERT 시 category_seq.NEXTVAL 사용 | 카테고리 ID | " value="c_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-CATEGORY-0" parent="tbl-CATEGORY" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -265,7 +265,7 @@
         <mxCell id="key-CATEGORY-1" parent="tbl-CATEGORY" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-CATEGORY-name" parent="tbl-CATEGORY" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CATEGORY.name | VARCHAR2(50 CHAR) | NULL 불가 | KEY UQ | DEFAULT 없음 | 카테고리 표시명. 구체적인 분류명은 데모 데이터에서 결정. | " value="name" vertex="1">
+        <mxCell id="col-CATEGORY-name" parent="tbl-CATEGORY" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CATEGORY.c_name | VARCHAR2(10 CHAR) | NULL 불가 | KEY UQ | DEFAULT 없음 | 카테고리 표시명. 구체적인 분류명은 데모 데이터에서 결정. | " value="c_name" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-CATEGORY-1" parent="tbl-CATEGORY" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(10 CHAR)" vertex="1">
@@ -286,7 +286,7 @@
         <mxCell id="hdr-desc-LISTING" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#F8FAFC;fontStyle=0;spacing=0;" value="상품" vertex="1">
           <mxGeometry height="22" width="438" x="20" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="hdr-count-LISTING" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="13 columns" vertex="1">
+        <mxCell id="hdr-count-LISTING" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="12 columns" vertex="1">
           <mxGeometry height="30" width="147" x="450" y="17" as="geometry" />
         </mxCell>
         <mxCell id="rowbg-LISTING-0" parent="tbl-LISTING" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" value="" vertex="1">
@@ -295,7 +295,7 @@
         <mxCell id="key-LISTING-0" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#1D4ED8;fontStyle=1;spacing=0;" value="PK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-listing_id" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="LISTING.listing_id | NUMBER(18,0) | NULL 불가 | KEY PK/UQ | DEFAULT GENERATED ALWAYS AS IDENTITY | 상품 ID | " value="product_id" vertex="1">
+        <mxCell id="col-LISTING-listing_id" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="PRODUCT.p_id | NUMBER(18,0) | NULL 불가 | KEY PK/UQ | ID 생성: INSERT 시 product_seq.NEXTVAL 사용 | 상품 ID | " value="p_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-0" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -310,7 +310,7 @@
         <mxCell id="key-LISTING-1" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="FK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-owner_id" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.owner_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 원등록 판매자. 거래 완료 후에도 변경하지 않아 이력·권한 조회에 사용. | FK_LISTING_OWNER → APP_USER.user_id" value="user_id" vertex="1">
+        <mxCell id="col-LISTING-owner_id" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_users_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 원등록 판매자. 거래 완료 후에도 변경하지 않아 이력·권한 조회에 사용. | FK_LISTING_OWNER → USERS.u_id" value="p_users_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-1" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -325,7 +325,7 @@
         <mxCell id="key-LISTING-2" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="137" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-category_id" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.category_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 시드 카테고리 ID | FK_LISTING_CATEGORY → CATEGORY.category_id" value="category_id" vertex="1">
+        <mxCell id="col-LISTING-category_id" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_category_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 시드 카테고리 ID | FK_LISTING_CATEGORY → CATEGORY.c_id" value="p_category_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="136" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-2" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -340,7 +340,7 @@
         <mxCell id="key-LISTING-3" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-sale_type" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.sale_type | VARCHAR2(7 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 일반판매 SALE / 경매 AUCTION. 생성 후 고정. | " value="sale_type" vertex="1">
+        <mxCell id="col-LISTING-sale_type" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_sale_type | VARCHAR2(10 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 일반판매 SALE / 경매 AUCTION. 생성 후 고정. | " value="p_sale_type" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="169" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-3" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(10 CHAR)" vertex="1">
@@ -355,10 +355,10 @@
         <mxCell id="key-LISTING-4" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="203" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-barter_allowed" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.barter_allowed | CHAR(1 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &#39;N&#39; | 대상 상품으로 교환 제안을 받는 설정. 제공 상품에는 ON을 강제하지 않음. | " value="trade_ok" vertex="1">
+        <mxCell id="col-LISTING-barter_allowed" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_trade_ok | VARCHAR2(5 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &#x27;N&#x27; | 대상 상품으로 교환 제안을 받는 설정. 제공 상품에는 ON을 강제하지 않음. | " value="p_trade_ok" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="202" as="geometry" />
         </mxCell>
-        <mxCell id="type-LISTING-4" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="CHAR(5 CHAR)" vertex="1">
+        <mxCell id="type-LISTING-4" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(5 CHAR)" vertex="1">
           <mxGeometry height="28" width="272" x="287" y="201" as="geometry" />
         </mxCell>
         <mxCell id="null-LISTING-4" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=0;spacing=0;" value="NN" vertex="1">
@@ -370,7 +370,7 @@
         <mxCell id="key-LISTING-5" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="236" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-title" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.title | VARCHAR2(100 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 상품명. 앞뒤 공백 제거 후 1~100 코드 포인트. | " value="title" vertex="1">
+        <mxCell id="col-LISTING-title" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_title | VARCHAR2(30 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 상품명. 앞뒤 공백 제거 후 1~100 코드 포인트. | " value="p_title" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="235" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-5" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(30 CHAR)" vertex="1">
@@ -385,7 +385,7 @@
         <mxCell id="key-LISTING-6" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="269" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-description" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.description | VARCHAR2(1000 CHAR) | NULL 허용 | KEY 없음 | DEFAULT 없음 | 상세 설명. 줄바꿈 보존. 생략 가능. | " value="description" vertex="1">
+        <mxCell id="col-LISTING-description" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_description | VARCHAR2(500 CHAR) | NULL 허용 | KEY 없음 | DEFAULT 없음 | 상세 설명. 줄바꿈 보존. 생략 가능. | " value="p_description" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="268" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-6" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(500 CHAR)" vertex="1">
@@ -406,7 +406,7 @@
         <mxCell id="key-LISTING-8" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="335" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-sale_price" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.sale_price | NUMBER | NULL 허용 | KEY 없음 | DEFAULT 없음 | 일반판매 정가. 경매 시작가는 AUCTION에 저장. | " value="sale_price" vertex="1">
+        <mxCell id="col-LISTING-sale_price" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_sale_price | NUMBER(10,0) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 일반판매 정가. 경매 시작가는 AUCTION에 저장. | " value="p_sale_price" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="334" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-8" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(10,0)" vertex="1">
@@ -418,7 +418,7 @@
         <mxCell id="key-LISTING-9" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="368" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-status" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.status | VARCHAR2(16 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &#39;AVAILABLE&#39; | 상품 가용 상태. 서버 사건으로만 갱신. | " value="sale_status" vertex="1">
+        <mxCell id="col-LISTING-status" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_sale_status | VARCHAR2(10 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &#x27;AVAILABLE&#x27; | 상품 가용 상태. 서버 사건으로만 갱신. | " value="p_sale_status" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="367" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-9" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(10 CHAR)" vertex="1">
@@ -433,7 +433,7 @@
         <mxCell id="key-LISTING-10" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="401" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-created_at" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 최초 등록 시각. 등록 때 서버 시각을 함께 사용. | " value="created_at" vertex="1">
+        <mxCell id="col-LISTING-created_at" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 최초 등록 시각. 등록 때 서버 시각을 함께 사용. | " value="p_created_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="400" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-10" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -448,7 +448,7 @@
         <mxCell id="key-LISTING-11" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="434" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-updated_at" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.updated_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 마지막 상품 수정/상태 변경 시각. 최초 등록과 같게 시작하고 서비스에서 갱신. | " value="updated_at" vertex="1">
+        <mxCell id="col-LISTING-updated_at" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_updated_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 마지막 상품 수정/상태 변경 시각. 최초 등록과 같게 시작하고 서비스에서 갱신. | " value="p_updated_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="433" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-11" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -463,7 +463,7 @@
         <mxCell id="key-LISTING-12" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="467" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING-deleted_at" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING.deleted_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 논리 삭제 시각. DELETED에만 기록. | " value="deleted_at" vertex="1">
+        <mxCell id="col-LISTING-deleted_at" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT.p_deleted_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 논리 삭제 시각. DELETED에만 기록. | " value="p_deleted_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="466" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING-12" parent="tbl-LISTING" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -496,7 +496,7 @@
         <mxCell id="key-LISTING_IMAGE-0" parent="tbl-LISTING_IMAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="PK FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING_IMAGE-listing_id" parent="tbl-LISTING_IMAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="LISTING_IMAGE.listing_id | NUMBER(18,0) | NULL 불가 | KEY PK/FK | DEFAULT 없음 | 상품 ID. 공유 PK/FK로 대표 이미지 최대 1장. | FK_IMG_LISTING → LISTING.listing_id" value="product_id" vertex="1">
+        <mxCell id="col-LISTING_IMAGE-listing_id" parent="tbl-LISTING_IMAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="PRODUCT_IMAGE.pi_product_id | NUMBER(18,0) | NULL 불가 | KEY PK/FK | DEFAULT 없음 | 상품 ID. 공유 PK/FK로 대표 이미지 최대 1장. | FK_IMG_LISTING → PRODUCT.p_id" value="pi_product_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING_IMAGE-0" parent="tbl-LISTING_IMAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -511,7 +511,7 @@
         <mxCell id="key-LISTING_IMAGE-1" parent="tbl-LISTING_IMAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-LISTING_IMAGE-storage_key" parent="tbl-LISTING_IMAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="LISTING_IMAGE.storage_key | VARCHAR2(255 CHAR) | NULL 불가 | KEY UQ | DEFAULT 없음 | 서버가 발급한 로컬 상대 저장 키. 브라우저가 보낸 파일 경로를 사용하지 않음. | " value="storage" vertex="1">
+        <mxCell id="col-LISTING_IMAGE-storage_key" parent="tbl-LISTING_IMAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="PRODUCT_IMAGE.pi_storage | VARCHAR2(255 CHAR) | NULL 불가 | KEY UQ | DEFAULT 없음 | 서버가 발급한 로컬 상대 저장 키. 브라우저가 보낸 파일 경로를 사용하지 않음. | " value="pi_storage" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-LISTING_IMAGE-1" parent="tbl-LISTING_IMAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(255 CHAR)" vertex="1">
@@ -541,7 +541,7 @@
         <mxCell id="key-AUCTION-0" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="PK FK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-AUCTION-auction_id" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="AUCTION.auction_id | NUMBER(18,0) | NULL 불가 | KEY PK/FK/UQ | DEFAULT GENERATED ALWAYS AS IDENTITY | 경매 ID | FK_AUC_WIN_BID → BID.auction_id" value="auction_id" vertex="1">
+        <mxCell id="col-AUCTION-auction_id" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="AUCTION.a_id | NUMBER(18,0) | NULL 불가 | KEY PK/FK/UQ | ID 생성: INSERT 시 auction_seq.NEXTVAL 사용 | 경매 ID | FK_AUC_WIN_BID → BID.b_auction_id" value="a_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-AUCTION-0" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -556,7 +556,7 @@
         <mxCell id="key-AUCTION-1" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="FK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-AUCTION-listing_id" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.listing_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 경매 상품 ID. 상품당 경매 최대 하나. | FK_AUC_LISTING → LISTING.listing_id" value="product_id" vertex="1">
+        <mxCell id="col-AUCTION-listing_id" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.a_product_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 경매 상품 ID. 상품당 경매 최대 하나. | FK_AUC_LISTING → PRODUCT.p_id" value="a_product_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-AUCTION-1" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -571,10 +571,10 @@
         <mxCell id="key-AUCTION-2" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="137" as="geometry" />
         </mxCell>
-        <mxCell id="col-AUCTION-start_price" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.start_price | NUMBER | NULL 불가 | KEY 없음 | DEFAULT 없음 | 원화 정수 시작가. 최저 1,000원. | " value="start_price" vertex="1">
+        <mxCell id="col-AUCTION-start_price" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.a_start_price | NUMBER(18,0) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 원화 정수 시작가. 최저 1,000원. | " value="a_start_price" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="136" as="geometry" />
         </mxCell>
-        <mxCell id="type-AUCTION-2" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER" vertex="1">
+        <mxCell id="type-AUCTION-2" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
           <mxGeometry height="28" width="272" x="287" y="135" as="geometry" />
         </mxCell>
         <mxCell id="null-AUCTION-2" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=0;spacing=0;" value="NN" vertex="1">
@@ -586,7 +586,7 @@
         <mxCell id="key-AUCTION-3" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="col-AUCTION-period_code" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.period_code | VARCHAR2(2 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | W1, W2, W3 또는 M1. | " value="period_code" vertex="1">
+        <mxCell id="col-AUCTION-period_code" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.a_period_code | VARCHAR2(2 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | W1, W2, W3 또는 M1. | " value="a_period_code" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="169" as="geometry" />
         </mxCell>
         <mxCell id="type-AUCTION-3" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(2 CHAR)" vertex="1">
@@ -601,7 +601,7 @@
         <mxCell id="key-AUCTION-4" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="203" as="geometry" />
         </mxCell>
-        <mxCell id="col-AUCTION-start_at" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.start_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT 없음 | 최초 상품 등록 시각과 동일한 서버값. 이후 고정. | " value="start_at" vertex="1">
+        <mxCell id="col-AUCTION-start_at" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.a_start_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT 없음 | 최초 상품 등록 시각과 동일한 서버값. 이후 고정. | " value="a_start_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="202" as="geometry" />
         </mxCell>
         <mxCell id="type-AUCTION-4" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -616,7 +616,7 @@
         <mxCell id="key-AUCTION-5" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="236" as="geometry" />
         </mxCell>
-        <mxCell id="col-AUCTION-end_at" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.end_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT 없음 | 최초 등록 시각에 선택 기간을 더한 종료 시각. | " value="end_at" vertex="1">
+        <mxCell id="col-AUCTION-end_at" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.a_end_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT 없음 | 최초 등록 시각에 선택 기간을 더한 종료 시각. | " value="a_end_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="235" as="geometry" />
         </mxCell>
         <mxCell id="type-AUCTION-5" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -631,7 +631,7 @@
         <mxCell id="key-AUCTION-6" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="269" as="geometry" />
         </mxCell>
-        <mxCell id="col-AUCTION-status" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.status | VARCHAR2(12 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &#39;OPEN&#39; | 경매 상태. 낙찰 구매를 마쳐도 WON 유지. | " value="status" vertex="1">
+        <mxCell id="col-AUCTION-status" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.a_status | VARCHAR2(12 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &apos;OPEN&apos; | 경매 상태. 낙찰 구매를 마쳐도 WON 유지. | " value="a_status" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="268" as="geometry" />
         </mxCell>
         <mxCell id="type-AUCTION-6" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(12 CHAR)" vertex="1">
@@ -646,7 +646,7 @@
         <mxCell id="key-AUCTION-7" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="302" as="geometry" />
         </mxCell>
-        <mxCell id="col-AUCTION-winning_bid_id" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.winning_bid_id | NUMBER(18,0) | NULL 허용 | KEY FK | DEFAULT 없음 | 낙찰 입찰 ID. 낙찰자와 낙찰가의 원본을 참조. | FK_AUC_WIN_BID → BID.bid_id" value="winning_bid_id" vertex="1">
+        <mxCell id="col-AUCTION-winning_bid_id" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.a_winning_bid_id | NUMBER(18,0) | NULL 허용 | KEY FK | DEFAULT 없음 | 낙찰 입찰 ID. 낙찰자와 낙찰가의 원본을 참조. | FK_AUC_WIN_BID → BID.b_id" value="a_winning_bid_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="301" as="geometry" />
         </mxCell>
         <mxCell id="type-AUCTION-7" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -661,7 +661,7 @@
         <mxCell id="key-AUCTION-8" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="335" as="geometry" />
         </mxCell>
-        <mxCell id="col-AUCTION-closed_at" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.closed_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 종료 결과를 서버가 확정한 시각. 마감 처리와 기한을 구분. | " value="closed_at" vertex="1">
+        <mxCell id="col-AUCTION-closed_at" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="AUCTION.a_closed_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 종료 결과를 서버가 확정한 시각. 마감 처리와 기한을 구분. | " value="a_closed_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="334" as="geometry" />
         </mxCell>
         <mxCell id="type-AUCTION-8" parent="tbl-AUCTION" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -691,7 +691,7 @@
         <mxCell id="key-BID-0" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#1D4ED8;fontStyle=1;spacing=0;" value="PK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-BID-bid_id" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="BID.bid_id | NUMBER(18,0) | NULL 불가 | KEY PK/UQ | DEFAULT GENERATED ALWAYS AS IDENTITY | 입찰 ID | " value="bid_id" vertex="1">
+        <mxCell id="col-BID-bid_id" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="BID.b_id | NUMBER(18,0) | NULL 불가 | KEY PK/UQ | ID 생성: INSERT 시 bid_seq.NEXTVAL 사용 | 입찰 ID | " value="b_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-BID-0" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -706,7 +706,7 @@
         <mxCell id="key-BID-1" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="FK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-BID-auction_id" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="BID.auction_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 입찰이 속한 경매 | FK_BID_AUCTION → AUCTION.auction_id" value="auction_id" vertex="1">
+        <mxCell id="col-BID-auction_id" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="BID.b_auction_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 입찰이 속한 경매 | FK_BID_AUCTION → AUCTION.a_id" value="b_auction_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-BID-1" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -721,7 +721,7 @@
         <mxCell id="key-BID-2" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="137" as="geometry" />
         </mxCell>
-        <mxCell id="col-BID-bidder_id" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="BID.bidder_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 로그인 입찰자 | FK_BID_BIDDER → APP_USER.user_id" value="bidder_id" vertex="1">
+        <mxCell id="col-BID-bidder_id" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="BID.b_bidder_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 로그인 입찰자 | FK_BID_BIDDER → USERS.u_id" value="b_bidder_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="136" as="geometry" />
         </mxCell>
         <mxCell id="type-BID-2" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -736,10 +736,10 @@
         <mxCell id="key-BID-3" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="col-BID-amount" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="BID.amount | NUMBER | NULL 불가 | KEY 없음 | DEFAULT 없음 | 유효 원화 정수 입찰액. 첫 입찰은 시작가 이상, 이후 최고가+1,000원 이상. | " value="amount" vertex="1">
+        <mxCell id="col-BID-amount" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="BID.b_amount | NUMBER(18,0) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 유효 원화 정수 입찰액. 첫 입찰은 시작가 이상, 이후 최고가+1,000원 이상. | " value="b_amount" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="169" as="geometry" />
         </mxCell>
-        <mxCell id="type-BID-3" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER" vertex="1">
+        <mxCell id="type-BID-3" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
           <mxGeometry height="28" width="272" x="287" y="168" as="geometry" />
         </mxCell>
         <mxCell id="null-BID-3" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=0;spacing=0;" value="NN" vertex="1">
@@ -751,7 +751,7 @@
         <mxCell id="key-BID-4" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="203" as="geometry" />
         </mxCell>
-        <mxCell id="col-BID-created_at" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="BID.created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 서버가 입찰을 판정하고 기록한 기준 시각. | " value="created_at" vertex="1">
+        <mxCell id="col-BID-created_at" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="BID.b_created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 서버가 입찰을 판정하고 기록한 기준 시각. | " value="b_created_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="202" as="geometry" />
         </mxCell>
         <mxCell id="type-BID-4" parent="tbl-BID" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -761,18 +761,18 @@
           <mxGeometry height="22" width="48" x="561" y="203" as="geometry" />
         </mxCell>
         <mxCell id="tbl-ORDERS" parent="1" style="rounded=1;arcSize=6;container=1;collapsible=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B8CEFA;strokeWidth=1.7;shadow=0;" value="" vertex="1">
-          <mxGeometry height="307" width="620" x="2440" y="1010" as="geometry" />
+          <mxGeometry height="274" width="620" x="2440" y="1010" as="geometry" />
         </mxCell>
         <mxCell id="hdr-ORDERS" parent="tbl-ORDERS" style="rounded=1;arcSize=4;fillColor=#1D4ED8;strokeColor=#1D4ED8;html=1;whiteSpace=wrap;" value="" vertex="1">
           <mxGeometry height="66" width="620" as="geometry" />
         </mxCell>
-        <mxCell id="hdr-name-ORDERS" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=22;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="ORDER" vertex="1">
+        <mxCell id="hdr-name-ORDERS" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=22;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="ORDERS" vertex="1">
           <mxGeometry height="32" width="405" x="19" y="7" as="geometry" />
         </mxCell>
         <mxCell id="hdr-desc-ORDERS" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#F8FAFC;fontStyle=0;spacing=0;" value="완료 주문" vertex="1">
           <mxGeometry height="22" width="438" x="20" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="hdr-count-ORDERS" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="7 columns" vertex="1">
+        <mxCell id="hdr-count-ORDERS" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="6 columns" vertex="1">
           <mxGeometry height="30" width="147" x="450" y="17" as="geometry" />
         </mxCell>
         <mxCell id="rowbg-ORDERS-0" parent="tbl-ORDERS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" value="" vertex="1">
@@ -781,7 +781,7 @@
         <mxCell id="key-ORDERS-0" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#1D4ED8;fontStyle=1;spacing=0;" value="PK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-ORDERS-order_id" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="ORDERS.order_id | NUMBER(18,0) | NULL 불가 | KEY PK | DEFAULT GENERATED ALWAYS AS IDENTITY | 완료 주문 ID | " value="order_id" vertex="1">
+        <mxCell id="col-ORDERS-order_id" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="ORDERS.o_id | NUMBER(18,0) | NULL 불가 | KEY PK | ID 생성: INSERT 시 orders_seq.NEXTVAL 사용 | 완료 주문 ID | " value="o_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-ORDERS-0" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -796,7 +796,7 @@
         <mxCell id="key-ORDERS-1" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="FK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-ORDERS-listing_id" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.listing_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 구매 상품 ID. 상품당 완료 주문 최대 한 건. | FK_ORD_LISTING → LISTING.listing_id&#xa;FK_ORD_AUC_LISTING → AUCTION.listing_id" value="product_id" vertex="1">
+        <mxCell id="col-ORDERS-listing_id" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.o_product_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 구매 상품 ID. 상품당 완료 주문 최대 한 건. | FK_ORD_LISTING → PRODUCT.p_id&#xa;FK_ORD_AUC_LISTING → AUCTION.a_product_id" value="o_product_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-ORDERS-1" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -811,7 +811,7 @@
         <mxCell id="key-ORDERS-2" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="137" as="geometry" />
         </mxCell>
-        <mxCell id="col-ORDERS-buyer_id" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.buyer_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 완료 주문 구매자. 낙찰 구매이면 낙찰 입찰자. | FK_ORD_BUYER → APP_USER.user_id" value="buyer_id" vertex="1">
+        <mxCell id="col-ORDERS-buyer_id" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.o_buyer_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 완료 주문 구매자. 낙찰 구매이면 낙찰 입찰자. | FK_ORD_BUYER → USERS.u_id" value="o_buyer_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="136" as="geometry" />
         </mxCell>
         <mxCell id="type-ORDERS-2" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -826,7 +826,7 @@
         <mxCell id="key-ORDERS-3" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="col-ORDERS-auction_id" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.auction_id | NUMBER(18,0) | NULL 허용 | KEY FK | DEFAULT 없음 | 낙찰 구매일 때만 해당 경매 ID. 일반판매는 NULL. | FK_ORD_AUC_LISTING → AUCTION.auction_id" value="auction_id" vertex="1">
+        <mxCell id="col-ORDERS-auction_id" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.o_auction_id | NUMBER(18,0) | NULL 허용 | KEY FK | DEFAULT 없음 | 낙찰 구매일 때만 해당 경매 ID. 일반판매는 NULL. | FK_ORD_AUC_LISTING → AUCTION.a_id" value="o_auction_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="169" as="geometry" />
         </mxCell>
         <mxCell id="type-ORDERS-3" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -841,44 +841,29 @@
         <mxCell id="key-ORDERS-4" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="203" as="geometry" />
         </mxCell>
-        <mxCell id="col-ORDERS-total_amount" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.total_amount | NUMBER | NULL 불가 | KEY 없음 | DEFAULT 없음 | 구매 완료 당시 상품 정가 또는 낙찰가를 저장한 원화 금액. | " value="total_amount" vertex="1">
+        <mxCell id="col-ORDERS-total_amount" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.o_total_amount | NUMBER(18,0) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 구매 완료 당시 상품 정가 또는 낙찰가를 저장한 원화 금액. | " value="o_total_amount" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="202" as="geometry" />
         </mxCell>
-        <mxCell id="type-ORDERS-4" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER" vertex="1">
+        <mxCell id="type-ORDERS-4" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
           <mxGeometry height="28" width="272" x="287" y="201" as="geometry" />
         </mxCell>
         <mxCell id="null-ORDERS-4" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=0;spacing=0;" value="NN" vertex="1">
           <mxGeometry height="22" width="48" x="561" y="203" as="geometry" />
         </mxCell>
-        <mxCell id="rowbg-ORDERS-5" parent="tbl-ORDERS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7FAFC;strokeColor=none;" value="" vertex="1">
+        <mxCell id="rowbg-ORDERS-6" parent="tbl-ORDERS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7FAFC;strokeColor=none;" value="" vertex="1">
           <mxGeometry height="33" width="618" x="1" y="231" as="geometry" />
         </mxCell>
-        <mxCell id="key-ORDERS-5" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
+        <mxCell id="key-ORDERS-6" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="236" as="geometry" />
         </mxCell>
-        <mxCell id="col-ORDERS-status" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.status | VARCHAR2(9 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &#39;COMPLETED&#39; | 1차 완료 주문 상태 COMPLETED. | " value="status" vertex="1">
+        <mxCell id="col-ORDERS-completed_at" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.o_completed_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 간이 구매가 완료된 시각. | " value="o_completed_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="235" as="geometry" />
         </mxCell>
-        <mxCell id="type-ORDERS-5" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(9 CHAR)" vertex="1">
+        <mxCell id="type-ORDERS-6" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
           <mxGeometry height="28" width="272" x="287" y="234" as="geometry" />
         </mxCell>
-        <mxCell id="null-ORDERS-5" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=0;spacing=0;" value="NN" vertex="1">
-          <mxGeometry height="22" width="48" x="561" y="236" as="geometry" />
-        </mxCell>
-        <mxCell id="rowbg-ORDERS-6" parent="tbl-ORDERS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="33" width="618" x="1" y="264" as="geometry" />
-        </mxCell>
-        <mxCell id="key-ORDERS-6" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
-          <mxGeometry height="23" width="68" x="8" y="269" as="geometry" />
-        </mxCell>
-        <mxCell id="col-ORDERS-completed_at" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="ORDERS.completed_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 간이 구매가 완료된 시각. | " value="completed_at" vertex="1">
-          <mxGeometry height="26" width="205" x="80" y="268" as="geometry" />
-        </mxCell>
-        <mxCell id="type-ORDERS-6" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
-          <mxGeometry height="28" width="272" x="287" y="267" as="geometry" />
-        </mxCell>
         <mxCell id="null-ORDERS-6" parent="tbl-ORDERS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=0;spacing=0;" value="NN" vertex="1">
-          <mxGeometry height="22" width="48" x="561" y="269" as="geometry" />
+          <mxGeometry height="22" width="48" x="561" y="236" as="geometry" />
         </mxCell>
         <mxCell id="tbl-TRADE_OFFER" parent="1" style="rounded=1;arcSize=6;container=1;collapsible=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D3BFFA;strokeWidth=1.7;shadow=0;" value="" vertex="1">
           <mxGeometry height="340" width="620" x="860" y="1380" as="geometry" />
@@ -901,7 +886,7 @@
         <mxCell id="key-TRADE_OFFER-0" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#1D4ED8;fontStyle=1;spacing=0;" value="PK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_OFFER-offer_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="TRADE_OFFER.offer_id | NUMBER(18,0) | NULL 불가 | KEY PK | DEFAULT GENERATED ALWAYS AS IDENTITY | 교환 제안 ID | " value="offer_id" vertex="1">
+        <mxCell id="col-TRADE_OFFER-offer_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="TRADE_OFFER.to_id | NUMBER(18,0) | NULL 불가 | KEY PK | ID 생성: INSERT 시 trade_offer_seq.NEXTVAL 사용 | 교환 제안 ID | " value="to_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_OFFER-0" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -916,7 +901,7 @@
         <mxCell id="key-TRADE_OFFER-1" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_OFFER-target_listing_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.target_listing_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 수신자가 등록한 상품. 제안자가 받음. | FK_OFFER_TARGET → LISTING.listing_id" value="target_product_id" vertex="1">
+        <mxCell id="col-TRADE_OFFER-target_listing_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.to_target_product_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 수신자가 등록한 상품. 제안자가 받음. | FK_OFFER_TARGET → PRODUCT.p_id" value="to_target_product_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_OFFER-1" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -931,7 +916,7 @@
         <mxCell id="key-TRADE_OFFER-2" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="137" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_OFFER-offered_listing_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.offered_listing_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 발신자가 등록한 상품. 수신자가 받음. | FK_OFFER_OFFERED → LISTING.listing_id" value="offered_product_id" vertex="1">
+        <mxCell id="col-TRADE_OFFER-offered_listing_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.to_offered_product_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 발신자가 등록한 상품. 수신자가 받음. | FK_OFFER_OFFERED → PRODUCT.p_id" value="to_offered_product_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="136" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_OFFER-2" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -946,7 +931,7 @@
         <mxCell id="key-TRADE_OFFER-3" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_OFFER-sender_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.sender_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 발신자. 제공 상품의 원등록 판매자. | FK_OFFER_OFFERED → LISTING.owner_id" value="sender_id" vertex="1">
+        <mxCell id="col-TRADE_OFFER-sender_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.to_sender_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 발신자. 제공 상품의 원등록 판매자. | FK_OFFER_OFFERED → PRODUCT.p_users_id" value="to_sender_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="169" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_OFFER-3" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -961,7 +946,7 @@
         <mxCell id="key-TRADE_OFFER-4" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="203" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_OFFER-receiver_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.receiver_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 수신자. 대상 상품의 원등록 판매자. | FK_OFFER_TARGET → LISTING.owner_id" value="receiver_id" vertex="1">
+        <mxCell id="col-TRADE_OFFER-receiver_id" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.to_receiver_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 수신자. 대상 상품의 원등록 판매자. | FK_OFFER_TARGET → PRODUCT.p_users_id" value="to_receiver_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="202" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_OFFER-4" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -976,7 +961,7 @@
         <mxCell id="key-TRADE_OFFER-5" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="236" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_OFFER-status" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.status | VARCHAR2(9 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &#39;PENDING&#39; | 교환 제안 상태. 제안은 수락 후 거래가 끝나도 ACCEPTED 유지. | " value="status" vertex="1">
+        <mxCell id="col-TRADE_OFFER-status" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.to_status | VARCHAR2(9 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &apos;PENDING&apos; | 교환 제안 상태. 제안은 수락 후 거래가 끝나도 ACCEPTED 유지. | " value="to_status" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="235" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_OFFER-5" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(9 CHAR)" vertex="1">
@@ -991,7 +976,7 @@
         <mxCell id="key-TRADE_OFFER-6" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="269" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_OFFER-created_at" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 제안 제출 시각. | " value="created_at" vertex="1">
+        <mxCell id="col-TRADE_OFFER-created_at" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.to_created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 제안 제출 시각. | " value="to_created_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="268" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_OFFER-6" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -1006,7 +991,7 @@
         <mxCell id="key-TRADE_OFFER-7" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="302" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_OFFER-resolved_at" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.resolved_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 수락·거절·철회·무효가 반영된 시각. | " value="resolved_at" vertex="1">
+        <mxCell id="col-TRADE_OFFER-resolved_at" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_OFFER.to_resolved_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 수락·거절·철회·무효가 반영된 시각. | " value="to_resolved_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="301" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_OFFER-7" parent="tbl-TRADE_OFFER" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -1036,7 +1021,7 @@
         <mxCell id="key-TRADE_DEAL-0" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#1D4ED8;fontStyle=1;spacing=0;" value="PK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_DEAL-deal_id" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="TRADE_DEAL.deal_id | NUMBER(18,0) | NULL 불가 | KEY PK | DEFAULT GENERATED ALWAYS AS IDENTITY | 교환 거래 ID | " value="deal_id" vertex="1">
+        <mxCell id="col-TRADE_DEAL-deal_id" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="TRADE_DEAL.td_id | NUMBER(18,0) | NULL 불가 | KEY PK | ID 생성: INSERT 시 trade_deal_seq.NEXTVAL 사용 | 교환 거래 ID | " value="td_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_DEAL-0" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -1051,7 +1036,7 @@
         <mxCell id="key-TRADE_DEAL-1" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="FK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_DEAL-offer_id" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.offer_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 수락된 제안 ID. 두 상품과 두 당사자의 원본. | FK_DEAL_OFFER → TRADE_OFFER.offer_id" value="offer_id" vertex="1">
+        <mxCell id="col-TRADE_DEAL-offer_id" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.td_trade_offer_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 수락된 제안 ID. 두 상품과 두 당사자의 원본. | FK_DEAL_OFFER → TRADE_OFFER.to_id" value="td_trade_offer_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_DEAL-1" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -1066,7 +1051,7 @@
         <mxCell id="key-TRADE_DEAL-2" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="137" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_DEAL-status" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.status | VARCHAR2(11 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &#39;IN_PROGRESS&#39; | 이행중 IN_PROGRESS / 교환완료 COMPLETED. | " value="status" vertex="1">
+        <mxCell id="col-TRADE_DEAL-status" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.td_status | VARCHAR2(11 CHAR) | NULL 불가 | KEY 없음 | DEFAULT &apos;IN_PROGRESS&apos; | 이행중 IN_PROGRESS / 교환완료 COMPLETED. | " value="td_status" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="136" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_DEAL-2" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(11 CHAR)" vertex="1">
@@ -1081,7 +1066,7 @@
         <mxCell id="key-TRADE_DEAL-3" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="col-TRADE_DEAL-accepted_at" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.accepted_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 교환 수락 시각. 제안 판정 시각과 동일한 서버값. | " value="accepted_at" vertex="1">
+        <mxCell id="col-TRADE_DEAL-accepted_at" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.td_accepted_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 교환 수락 시각. 제안 판정 시각과 동일한 서버값. | " value="td_accepted_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="169" as="geometry" />
         </mxCell>
         <mxCell id="type-TRADE_DEAL-3" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -1102,7 +1087,7 @@
         <mxCell id="key-TRADE_DEAL-5" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="236" as="geometry" />
         </mxCell>
-        <mxCell id="RgMmpPN5NuhUKQXYIqWC-11" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.sender_received_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 발신자가 대상 상품을 수령했다고 표시한 시각. | " value="sender_received_at" vertex="1">
+        <mxCell id="RgMmpPN5NuhUKQXYIqWC-11" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.td_sender_received_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 발신자가 대상 상품을 수령했다고 표시한 시각. | " value="td_sender_received_at" vertex="1">
           <mxGeometry height="26" width="205" x="76" y="204" as="geometry" />
         </mxCell>
         <mxCell id="RgMmpPN5NuhUKQXYIqWC-12" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -1111,7 +1096,7 @@
         <mxCell id="RgMmpPN5NuhUKQXYIqWC-13" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=0;spacing=0;" value="NULL" vertex="1">
           <mxGeometry height="22" width="48" x="557" y="205" as="geometry" />
         </mxCell>
-        <mxCell id="RgMmpPN5NuhUKQXYIqWC-14" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.receiver_received_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 수신자가 제공 상품을 수령했다고 표시한 시각. | " value="receiver_received_at" vertex="1">
+        <mxCell id="RgMmpPN5NuhUKQXYIqWC-14" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="TRADE_DEAL.td_receiver_received_at | TIMESTAMP(6) WITH TIME ZONE | NULL 허용 | KEY 없음 | DEFAULT 없음 | 수신자가 제공 상품을 수령했다고 표시한 시각. | " value="td_receiver_received_at" vertex="1">
           <mxGeometry height="26" width="205" x="76" y="237" as="geometry" />
         </mxCell>
         <mxCell id="RgMmpPN5NuhUKQXYIqWC-15" parent="tbl-TRADE_DEAL" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -1141,7 +1126,7 @@
         <mxCell id="key-CHAT_ROOM-0" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#1D4ED8;fontStyle=1;spacing=0;" value="PK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_ROOM-room_id" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="CHAT_ROOM.room_id | NUMBER(18,0) | NULL 불가 | KEY PK | DEFAULT GENERATED ALWAYS AS IDENTITY | 채팅방 ID | " value="room_id" vertex="1">
+        <mxCell id="col-CHAT_ROOM-room_id" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="CHAT_ROOM.cr_id | NUMBER(18,0) | NULL 불가 | KEY PK | ID 생성: INSERT 시 chat_room_seq.NEXTVAL 사용 | 채팅방 ID | " value="cr_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_ROOM-0" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -1156,7 +1141,7 @@
         <mxCell id="key-CHAT_ROOM-1" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="FK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_ROOM-listing_id" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_ROOM.listing_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 대화 주제 상품 | FK_ROOM_LIST_SELLER → LISTING.listing_id" value="product_id" vertex="1">
+        <mxCell id="col-CHAT_ROOM-listing_id" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_ROOM.cr_product_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 대화 주제 상품 | FK_ROOM_LIST_SELLER → PRODUCT.p_id" value="cr_product_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_ROOM-1" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -1171,7 +1156,7 @@
         <mxCell id="key-CHAT_ROOM-2" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="137" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_ROOM-seller_id" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_ROOM.seller_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 상품의 원등록 판매자 | FK_ROOM_LIST_SELLER → LISTING.owner_id" value="seller_id" vertex="1">
+        <mxCell id="col-CHAT_ROOM-seller_id" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_ROOM.cr_seller_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 상품의 원등록 판매자 | FK_ROOM_LIST_SELLER → PRODUCT.p_users_id" value="cr_seller_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="136" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_ROOM-2" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -1186,7 +1171,7 @@
         <mxCell id="key-CHAT_ROOM-3" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#B45309;fontStyle=1;spacing=0;" value="FK UQ" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_ROOM-buyer_id" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_ROOM.buyer_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 채팅 시작 회원. 완료 주문 구매자를 뜻하지 않음. | FK_ROOM_BUYER → APP_USER.user_id" value="buyer_id" vertex="1">
+        <mxCell id="col-CHAT_ROOM-buyer_id" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_ROOM.cr_buyer_id | NUMBER(18,0) | NULL 불가 | KEY FK/UQ | DEFAULT 없음 | 채팅 시작 회원. 완료 주문 구매자를 뜻하지 않음. | FK_ROOM_BUYER → USERS.u_id" value="cr_buyer_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="169" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_ROOM-3" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -1201,7 +1186,7 @@
         <mxCell id="key-CHAT_ROOM-4" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="203" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_ROOM-created_at" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_ROOM.created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 채팅방 생성 시각. | " value="created_at" vertex="1">
+        <mxCell id="col-CHAT_ROOM-created_at" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_ROOM.cr_created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 채팅방 생성 시각. | " value="cr_created_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="202" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_ROOM-4" parent="tbl-CHAT_ROOM" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -1222,7 +1207,7 @@
         <mxCell id="hdr-desc-CHAT_MESSAGE" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#F8FAFC;fontStyle=0;spacing=0;" value="채팅 메시지" vertex="1">
           <mxGeometry height="22" width="438" x="20" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="hdr-count-CHAT_MESSAGE" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="7 columns" vertex="1">
+        <mxCell id="hdr-count-CHAT_MESSAGE" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#FFFFFF;fontStyle=1;spacing=0;" value="5 columns" vertex="1">
           <mxGeometry height="30" width="147" x="450" y="17" as="geometry" />
         </mxCell>
         <mxCell id="rowbg-CHAT_MESSAGE-0" parent="tbl-CHAT_MESSAGE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" value="" vertex="1">
@@ -1231,7 +1216,7 @@
         <mxCell id="key-CHAT_MESSAGE-0" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#1D4ED8;fontStyle=1;spacing=0;" value="PK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="71" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_MESSAGE-message_id" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="CHAT_MESSAGE.message_id | NUMBER(18,0) | NULL 불가 | KEY PK | DEFAULT GENERATED ALWAYS AS IDENTITY | 채팅 메시지 ID | " value="message_id" vertex="1">
+        <mxCell id="col-CHAT_MESSAGE-message_id" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=1;spacing=0;" tooltip="CHAT_MESSAGE.cm_id | NUMBER(18,0) | NULL 불가 | KEY PK | ID 생성: INSERT 시 chat_message_seq.NEXTVAL 사용 | 채팅 메시지 ID | " value="cm_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="70" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_MESSAGE-0" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -1246,7 +1231,7 @@
         <mxCell id="key-CHAT_MESSAGE-1" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_MESSAGE-room_id" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_MESSAGE.room_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 메시지가 속한 방 | FK_MSG_ROOM → CHAT_ROOM.room_id" value="room_id" vertex="1">
+        <mxCell id="col-CHAT_MESSAGE-room_id" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_MESSAGE.cm_chat_room_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 메시지가 속한 방 | FK_MSG_ROOM → CHAT_ROOM.cr_id" value="cm_chat_room_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="103" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_MESSAGE-1" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -1261,7 +1246,7 @@
         <mxCell id="key-CHAT_MESSAGE-2" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#0F766E;fontStyle=1;spacing=0;" value="FK" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="137" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_MESSAGE-sender_id" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_MESSAGE.sender_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 발신 회원. 해당 방 참여자인지 서버에서 확인. | FK_MSG_SENDER → APP_USER.user_id" value="sender_id" vertex="1">
+        <mxCell id="col-CHAT_MESSAGE-sender_id" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_MESSAGE.cm_sender_id | NUMBER(18,0) | NULL 불가 | KEY FK | DEFAULT 없음 | 발신 회원. 해당 방 참여자인지 서버에서 확인. | FK_MSG_SENDER → USERS.u_id" value="cm_sender_id" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="136" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_MESSAGE-2" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="NUMBER(18,0)" vertex="1">
@@ -1282,7 +1267,7 @@
         <mxCell id="key-CHAT_MESSAGE-4" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="203" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_MESSAGE-text_body" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_MESSAGE.text_body | VARCHAR2(100 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 앞뒤 공백 제거한 TEXT. 길이 단위는 유니코드 코드 포인트. | " value="text_body" vertex="1">
+        <mxCell id="col-CHAT_MESSAGE-text_body" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_MESSAGE.cm_text_body | VARCHAR2(100 CHAR) | NULL 불가 | KEY 없음 | DEFAULT 없음 | 앞뒤 공백 제거한 TEXT. 길이 단위는 유니코드 코드 포인트. | " value="cm_text_body" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="202" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_MESSAGE-4" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="VARCHAR2(100 CHAR)" vertex="1">
@@ -1303,7 +1288,7 @@
         <mxCell id="key-CHAT_MESSAGE-6" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#9CA3AF;fontStyle=1;spacing=0;" value="" vertex="1">
           <mxGeometry height="23" width="68" x="8" y="269" as="geometry" />
         </mxCell>
-        <mxCell id="col-CHAT_MESSAGE-created_at" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_MESSAGE.created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 서버 저장 시각. 같은 시각은 message_id로 정렬. | " value="created_at" vertex="1">
+        <mxCell id="col-CHAT_MESSAGE-created_at" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#0F172A;fontStyle=0;spacing=0;" tooltip="CHAT_MESSAGE.cm_created_at | TIMESTAMP(6) WITH TIME ZONE | NULL 불가 | KEY 없음 | DEFAULT SYSTIMESTAMP | 서버 저장 시각. 같은 시각은 message_id로 정렬. | " value="cm_created_at" vertex="1">
           <mxGeometry height="26" width="205" x="80" y="268" as="geometry" />
         </mxCell>
         <mxCell id="type-CHAT_MESSAGE-6" parent="tbl-CHAT_MESSAGE" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=11;fontColor=#64748B;fontStyle=0;spacing=0;" value="TIMESTAMP(6) WITH TIME ZONE" vertex="1">
@@ -1315,14 +1300,11 @@
         <mxCell id="box-meta" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=16;fontColor=#334155;fontStyle=1;spacing=0;" value="모델 해석 안내" vertex="1">
           <mxGeometry height="30" width="310" x="80" y="1870" as="geometry" />
         </mxCell>
-        <mxCell id="note-meta" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=0;spacing=0;" value="LISTING_IMAGE는 상품당 최대 1개 · 교환 제안의 송신/수신 소유자 FK는 LISTING 복합키를 거쳐 검증 · 판매/경매 주문은 ORDERS에 기록" vertex="1">
+        <mxCell id="note-meta" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=0;spacing=0;" value="LISTING_IMAGE는 상품당 최대 1개 · 교환 제안의 송신/수신 소유자 FK는 PRODUCT 복합키를 거쳐 검증 · 판매/경매 주문은 ORDERS에 기록" vertex="1">
           <mxGeometry height="45" width="2450" x="80" y="1905" as="geometry" />
         </mxCell>
         <mxCell id="note-meta2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=0;spacing=0;" value="AUCTION ↔ BID는 일반 입찰(실선)과 낙찰 입찰 참조(점선) 두 관계가 공존합니다." vertex="1">
           <mxGeometry height="42" width="2200" x="80" y="1950" as="geometry" />
-        </mxCell>
-        <mxCell id="sRfervy4aqB95qsVGjph-3" edge="1" parent="1" source="tbl-APP_USER" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="tbl-APP_USER">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -1335,7 +1317,7 @@
         <mxCell id="ref-title" value="FLIQ  /  FK RELATIONSHIPS" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=30;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="72" y="38" width="1560" height="52" as="geometry" />
         </mxCell>
-        <mxCell id="ref-sub" value="테이블 명세서 「관계」 시트 원문 기준 17개 FK   ·   컬럼 이름/순서 및 카디널리티 확인" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#64748B;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="ref-sub" value="01번 ERD 기준 17개 FK   ·   자식·부모 테이블과 참조 컬럼" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#64748B;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="75" y="98" width="1720" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ref-note" value="자식 → 부모 컬럼 순서 유지   |   복합 FK는 점선 관계로 01번 ERD에 표시   |   모든 FK의 ON DELETE는 기본 제한" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=14;fontColor=#64748B;fontStyle=0;spacing=0;" parent="1" vertex="1">
@@ -1350,10 +1332,10 @@
         <mxCell id="fk-tag-0" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="764" y="226" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-0" value="CHILD   LISTING  (owner_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-0" value="CHILD   PRODUCT  (p_users_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="261" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-0" value="PARENT  APP_USER  (user_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-0" value="PARENT  USERS  (u_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="296" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-0-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#0F766E;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1371,10 +1353,10 @@
         <mxCell id="fk-tag-1" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1728" y="226" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-1" value="CHILD   LISTING  (category_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-1" value="CHILD   PRODUCT  (p_category_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="261" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-1" value="PARENT  CATEGORY  (category_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-1" value="PARENT  CATEGORY  (c_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="296" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-1-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#0F766E;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1392,10 +1374,10 @@
         <mxCell id="fk-tag-2" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="764" y="463" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-2" value="CHILD   LISTING_IMAGE  (listing_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-2" value="CHILD   PRODUCT_IMAGE  (pi_product_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="498" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-2" value="PARENT  LISTING  (listing_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-2" value="PARENT  PRODUCT  (p_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="533" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-2-ratio" value="자식당 부모 1     /     부모당 자식 0..1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#0F766E;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1413,10 +1395,10 @@
         <mxCell id="fk-tag-3" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1728" y="463" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-3" value="CHILD   AUCTION  (listing_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-3" value="CHILD   AUCTION  (a_product_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="498" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-3" value="PARENT  LISTING  (listing_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-3" value="PARENT  PRODUCT  (p_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="533" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-3-ratio" value="자식당 부모 1     /     부모당 자식 0..1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#1D4ED8;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1434,10 +1416,10 @@
         <mxCell id="fk-tag-4" value="복합 FK · 2컬럼" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="764" y="700" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-4" value="CHILD   AUCTION  (auction_id, winning_bid_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-4" value="CHILD   AUCTION  (a_id, a_winning_bid_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="735" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-4" value="PARENT  BID  (auction_id, bid_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-4" value="PARENT  BID  (b_auction_id, b_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="770" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-4-ratio" value="자식당 부모 0..1     /     부모당 자식 0..1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#1D4ED8;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1455,10 +1437,10 @@
         <mxCell id="fk-tag-5" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1728" y="700" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-5" value="CHILD   BID  (auction_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-5" value="CHILD   BID  (b_auction_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="735" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-5" value="PARENT  AUCTION  (auction_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-5" value="PARENT  AUCTION  (a_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="770" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-5-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#1D4ED8;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1476,10 +1458,10 @@
         <mxCell id="fk-tag-6" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="764" y="937" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-6" value="CHILD   BID  (bidder_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-6" value="CHILD   BID  (b_bidder_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="972" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-6" value="PARENT  APP_USER  (user_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-6" value="PARENT  USERS  (u_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="1007" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-6-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#1D4ED8;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1497,10 +1479,10 @@
         <mxCell id="fk-tag-7" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1728" y="937" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-7" value="CHILD   ORDERS  (listing_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-7" value="CHILD   ORDERS  (o_product_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="972" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-7" value="PARENT  LISTING  (listing_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-7" value="PARENT  PRODUCT  (p_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="1007" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-7-ratio" value="자식당 부모 1     /     부모당 자식 0..1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#1D4ED8;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1518,10 +1500,10 @@
         <mxCell id="fk-tag-8" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="764" y="1174" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-8" value="CHILD   ORDERS  (buyer_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-8" value="CHILD   ORDERS  (o_buyer_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="1209" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-8" value="PARENT  APP_USER  (user_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-8" value="PARENT  USERS  (u_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="1244" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-8-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#1D4ED8;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1539,10 +1521,10 @@
         <mxCell id="fk-tag-9" value="복합 FK · 2컬럼" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1728" y="1174" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-9" value="CHILD   ORDERS  (listing_id, auction_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-9" value="CHILD   ORDERS  (o_product_id, o_auction_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="1209" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-9" value="PARENT  AUCTION  (listing_id, auction_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-9" value="PARENT  AUCTION  (a_product_id, a_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="1244" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-9-ratio" value="자식당 부모 0..1     /     부모당 자식 0..1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#1D4ED8;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1560,10 +1542,10 @@
         <mxCell id="fk-tag-10" value="복합 FK · 2컬럼" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="764" y="1411" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-10" value="CHILD   TRADE_OFFER  (target_listing_id, receiver_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-10" value="CHILD   TRADE_OFFER  (to_target_product_id, to_receiver_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="1446" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-10" value="PARENT  LISTING  (listing_id, owner_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-10" value="PARENT  PRODUCT  (p_id, p_users_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="1481" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-10-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#6D28D9;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1581,10 +1563,10 @@
         <mxCell id="fk-tag-11" value="복합 FK · 2컬럼" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1728" y="1411" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-11" value="CHILD   TRADE_OFFER  (offered_listing_id, sender_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-11" value="CHILD   TRADE_OFFER  (to_offered_product_id, to_sender_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="1446" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-11" value="PARENT  LISTING  (listing_id, owner_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-11" value="PARENT  PRODUCT  (p_id, p_users_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="1481" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-11-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#6D28D9;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1602,10 +1584,10 @@
         <mxCell id="fk-tag-12" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="764" y="1648" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-12" value="CHILD   TRADE_DEAL  (offer_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-12" value="CHILD   TRADE_DEAL  (td_trade_offer_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="1683" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-12" value="PARENT  TRADE_OFFER  (offer_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-12" value="PARENT  TRADE_OFFER  (to_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="1718" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-12-ratio" value="자식당 부모 1     /     부모당 자식 0..1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#6D28D9;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1623,10 +1605,10 @@
         <mxCell id="fk-tag-13" value="복합 FK · 2컬럼" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1728" y="1648" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-13" value="CHILD   CHAT_ROOM  (listing_id, seller_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-13" value="CHILD   CHAT_ROOM  (cr_product_id, cr_seller_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="1683" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-13" value="PARENT  LISTING  (listing_id, owner_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-13" value="PARENT  PRODUCT  (p_id, p_users_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="1718" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-13-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#B45309;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1644,10 +1626,10 @@
         <mxCell id="fk-tag-14" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="764" y="1885" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-14" value="CHILD   CHAT_ROOM  (buyer_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-14" value="CHILD   CHAT_ROOM  (cr_buyer_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="1920" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-14" value="PARENT  APP_USER  (user_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-14" value="PARENT  USERS  (u_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="1955" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-14-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#B45309;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1665,10 +1647,10 @@
         <mxCell id="fk-tag-15" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1728" y="1885" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-15" value="CHILD   CHAT_MESSAGE  (room_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-15" value="CHILD   CHAT_MESSAGE  (cm_chat_room_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="1920" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-15" value="PARENT  CHAT_ROOM  (room_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-15" value="PARENT  CHAT_ROOM  (cr_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="1060" y="1955" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-15-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#B45309;fontStyle=1;spacing=0;" parent="1" vertex="1">
@@ -1686,10 +1668,10 @@
         <mxCell id="fk-tag-16" value="단일 FK" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#64748B;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="764" y="2122" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-child-16" value="CHILD   CHAT_MESSAGE  (sender_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-child-16" value="CHILD   CHAT_MESSAGE  (cm_sender_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#0F172A;fontStyle=1;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="2157" width="890" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fk-parent-16" value="PARENT  APP_USER  (user_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
+        <mxCell id="fk-parent-16" value="PARENT  USERS  (u_id)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#334155;fontStyle=0;spacing=0;" parent="1" vertex="1">
           <mxGeometry x="96" y="2192" width="890" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fk-card-16-ratio" value="자식당 부모 1     /     부모당 자식 0..N" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#B45309;fontStyle=1;spacing=0;" parent="1" vertex="1">
